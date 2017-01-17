@@ -3,6 +3,8 @@ const app = express();
 const port = process.env.PORT || 8080;
 const expressLayouts = require('express-ejs-layouts');
 
+app.use(express.static(__dirname + '/public/dist/'))
+
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
